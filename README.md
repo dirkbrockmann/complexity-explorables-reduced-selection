@@ -21,3 +21,8 @@ The code fills the two div tags in index.html with the display and the controls 
 <div id="double-pendulum_display" class="display-panel"></div>
 <div id="double-pendulum_controls" class="control-panel"></div>
 ```
+It's a good idea to add a wrapper `<div>` around these elements for more control.
+
+The display and control divs have independent elements in the `explorables.css`.
+
+
