@@ -36,9 +36,9 @@ var gravity = {id:"t5", name: "gravity",  value: true};
 
 var buttons = [
 	widget.button({ id:"b1", name:"", actions: ["play","stop"], value: 0})
-		.update(runpause).size(60).symbolSize(40),
+		.update(runpause).size(60).symbolSize(35),
 	widget.button({ id:"b2", name:"", actions: ["rewind"], value: 0})
-		.update(reset).size(60).symbolSize(40)
+		.update(reset).size(60).symbolSize(35)
 	
 ]
 
