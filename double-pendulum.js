@@ -6,7 +6,7 @@ var world_width = 400,
 	controlbox_width = 400,
 	controlbox_height = 100,
 	n_grid_x = 4,
-	n_grid_y = 2;
+	n_grid_y = 5;
 
 var g = widget.grid(controlbox_width,controlbox_height,n_grid_x,n_grid_y);
 	
@@ -36,15 +36,15 @@ var gravity = {id:"t5", name: "gravity",  value: true};
 
 var buttons = [
 	widget.button({ id:"b1", name:"", actions: ["play","stop"], value: 0})
-		.update(runpause).size(80).symbolSize(50),
+		.update(runpause).size(60).symbolSize(40),
 	widget.button({ id:"b2", name:"", actions: ["rewind"], value: 0})
-		.update(reset).size(80).symbolSize(50)
+		.update(reset).size(60).symbolSize(40)
 	
 ]
 
 
 
-var playblock = g.block({x0:1,y0:1,width:2,height:1}).Nx(2);
+var playblock = g.block({x0:1,y0:3,width:2,height:1}).Nx(2);
 
 var world = d3.selectAll("#double-pendulum_display").append("svg")
 	.attr("width",world_width)
@@ -61,14 +61,15 @@ pb = controls.selectAll(".button").data(buttons).enter().append(widget.buttonEle
 
 
 
-controls.selectAll(".grid").data(g.lattice()).enter().append("circle")
+
+/*controls.selectAll(".grid").data(g.lattice()).enter().append("circle")
 	.attr("class","grid")
 	.attr("transform",function(d){
 		return "translate("+d.x+","+d.y+")"
 	})
 	.attr("r",1)
 	.style("fill","black")
-	.style("stroke","none")
+	.style("stroke","none")*/
 	
 	
 //////////////////////////////////
