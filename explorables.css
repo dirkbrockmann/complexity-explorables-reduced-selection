@@ -1,0 +1,10 @@
+
+.explorable_display {
+	border:1px solid black;
+	background:rgb(230,230,230);
+}
+
+.explorable_widgets {
+	background:white;
+	border:1px solid black;
+}
