@@ -1,4 +1,4 @@
-//(function(){
+(function(){
 
 
 var world_width = 400,
@@ -419,4 +419,4 @@ function energy(x){
 }
 
 	
-//})()
+})()
