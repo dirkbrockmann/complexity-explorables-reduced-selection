@@ -1,9 +1,9 @@
 (function(){
 
 
-var world_width = 400,
-	world_height = 400,
-	controlbox_width = 400,
+var world_width = 330,
+	world_height = 330,
+	controlbox_width = 330,
 	controlbox_height = 100,
 	n_grid_x = 4,
 	n_grid_y = 2;
