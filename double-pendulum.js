@@ -6,7 +6,7 @@ var world_width = 400,
 	controlbox_width = 400,
 	controlbox_height = 100,
 	n_grid_x = 4,
-	n_grid_y = 5;
+	n_grid_y = 2;
 
 var g = widget.grid(controlbox_width,controlbox_height,n_grid_x,n_grid_y);
 	
@@ -32,19 +32,19 @@ var ghost = {id:"t1", name: "ghost",  value: true};
 var trace = {id:"t2", name: "trace",  value: false};
 var pendel = {id:"t3", name: "hide pendulum",  value: false};
 var trajectory = {id:"t4", name: "show path on stop",  value: true};
-var gravity = {id:"t5", name: "gravity",  value: true};
+var gravity = {id:"timer5", name: "gravity",  value: true};
 
 var buttons = [
 	widget.button({ id:"b1", name:"", actions: ["play","stop"], value: 0})
-		.update(runpause).size(60).symbolSize(35),
+		.update(runpause).size(80).symbolSize(50),
 	widget.button({ id:"b2", name:"", actions: ["rewind"], value: 0})
-		.update(reset).size(60).symbolSize(35)
+		.update(reset).size(80).symbolSize(50)
 	
 ]
 
 
 
-var playblock = g.block({x0:1,y0:3,width:2,height:1}).Nx(2);
+var playblock = g.block({x0:1,y0:1,width:2,height:1}).Nx(2);
 
 var world = d3.selectAll("#double-pendulum_display").append("svg")
 	.attr("width",world_width)
@@ -58,8 +58,6 @@ var controls = d3.selectAll("#double-pendulum_controls").append("svg")
 
 pb = controls.selectAll(".button").data(buttons).enter().append(widget.buttonElement)
 	.attr("transform",function(d,i){return "translate("+playblock.x(i)+","+playblock.y(0)+")"});	
-
-
 
 
 /*controls.selectAll(".grid").data(g.lattice()).enter().append("circle")
