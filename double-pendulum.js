@@ -1,10 +1,10 @@
 (function(){
 
 
-var world_width = 330,
-	world_height = 330,
-	controlbox_width = 330,
-	controlbox_height = 100,
+var world_width = 280,
+	world_height = 280,
+	controlbox_width = 280,
+	controlbox_height = 80,
 	n_grid_x = 4,
 	n_grid_y = 2;
 
@@ -36,9 +36,9 @@ var gravity = {id:"timer5", name: "gravity",  value: true};
 
 var buttons = [
 	widget.button({ id:"b1", name:"", actions: ["play","stop"], value: 0})
-		.update(runpause).size(80).symbolSize(50),
+		.update(runpause).size(60).symbolSize(30),
 	widget.button({ id:"b2", name:"", actions: ["rewind"], value: 0})
-		.update(reset).size(80).symbolSize(50)
+		.update(reset).size(60).symbolSize(30)
 	
 ]
 
