@@ -15,7 +15,7 @@ var g = widget.grid(controlbox_width,controlbox_height,n_grid_x,n_grid_y);
 
 //fixed parameters
 
-
+	var t;
 var def_theta1 = 3*Math.PI/4;
 var def_theta2 = 3*Math.PI/4;
 var def_p1 = 0;
@@ -25,19 +25,19 @@ var bar_border = 2;
 var bar_thickness = 9;
 
 	
-var theta1 = {id:"theta1", name: "angle 1", range: [-Math.PI+2e-3,Math.PI-2e-3], value: def_theta1};
-var theta2 = {id:"theta2", name: "angle 2", range: [-Math.PI,Math.PI], value: def_theta2};
+var theta1 = {id:"dp_theta1", name: "angle 1", range: [-Math.PI+2e-3,Math.PI-2e-3], value: def_theta1};
+var theta2 = {id:"dp_theta2", name: "angle 2", range: [-Math.PI,Math.PI], value: def_theta2};
 
-var ghost = {id:"t1", name: "ghost",  value: true};
-var trace = {id:"t2", name: "trace",  value: false};
-var pendel = {id:"t3", name: "hide pendulum",  value: false};
-var trajectory = {id:"t4", name: "show path on stop",  value: true};
-var gravity = {id:"timer5", name: "gravity",  value: true};
+var ghost = {id:"dp_t1", name: "ghost",  value: true};
+var trace = {id:"dp_t2", name: "trace",  value: false};
+var pendel = {id:"dp_t3", name: "hide pendulum",  value: false};
+var trajectory = {id:"dp_t4", name: "show path on stop",  value: true};
+var gravity = {id:"dp_timer5", name: "gravity",  value: true};
 
 var buttons = [
-	widget.button({ id:"b1", name:"", actions: ["play","stop"], value: 0})
+	widget.button({ id:"dp_b1", name:"", actions: ["play","stop"], value: 0})
 		.update(runpause).size(60).symbolSize(30),
-	widget.button({ id:"b2", name:"", actions: ["rewind"], value: 0})
+	widget.button({ id:"dp_b2", name:"", actions: ["rewind"], value: 0})
 		.update(reset).size(60).symbolSize(30)
 	
 ]

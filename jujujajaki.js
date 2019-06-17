@@ -35,6 +35,8 @@ var N = 100,
 	w0 = 1,
 	rho = 1/100,
 	L = 2*world_width;
+	
+	var t;
 
 // this are the default values for the slider variables
 
@@ -69,12 +71,9 @@ var sliderwidth = sliderblock.w(),
 
 var slider = [
 	widget.slider(p_death).width(sliderwidth).trackSize(trackSize).handleSize(handleSize),
-		widget.slider(p_local).width(sliderwidth).trackSize(trackSize).handleSize(handleSize),
-		widget.slider(p_explore).width(sliderwidth).trackSize(trackSize).handleSize(handleSize),
-	widget.slider(delta).width(sliderwidth).trackSize(trackSize).handleSize(handleSize)
-
-
-	
+	widget.slider(p_local).width(sliderwidth).trackSize(trackSize).handleSize(handleSize),
+	widget.slider(p_explore).width(sliderwidth).trackSize(trackSize).handleSize(handleSize),
+	widget.slider(delta).width(sliderwidth).trackSize(trackSize).handleSize(handleSize)	
 ]
 
 // radios

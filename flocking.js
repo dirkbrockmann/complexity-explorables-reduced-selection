@@ -12,7 +12,7 @@ var world_width = 280,
 	
 var g = widget.grid(controlbox_width,controlbox_height,n_grid_x,n_grid_y);	
 
-	
+		var t;
 		
 var N = 200, // # of agents
 	L = 128, // world size
@@ -32,18 +32,18 @@ var def_speed = 0.64,
 
 // parameter objects for the sliders
 	
-var speed = {id:"dp_speed", name: "Speed", range: [0,1], value: def_speed};
-var noise_heading = {id:"dp_noise_heading", name: "Wiggle", range: [0,30], value: def_noise_heading};
-var R_coll = {id:"dp_rcoll", name: "Collision Radius", range: [0,2], value: def_R_coll};
-var R_align = {id:"dp_ralign", name: "Alignment Radius", range: [0,10], value: def_R_align};
-var R_attract = {id:"dp_rattract", name: "Attraction Radius", range: [0,20], value: def_R_attract};
-var blindspot = {id:"dp_blindspot", name: "Blind Spot", range: [1,360], value: def_blindspot};
+var speed = {id:"fl_speed", name: "Speed", range: [0,1], value: def_speed};
+var noise_heading = {id:"fl_noise_heading", name: "Wiggle", range: [0,30], value: def_noise_heading};
+var R_coll = {id:"fl_rcoll", name: "Collision Radius", range: [0,2], value: def_R_coll};
+var R_align = {id:"fl_ralign", name: "Alignment Radius", range: [0,10], value: def_R_align};
+var R_attract = {id:"fl_rattract", name: "Attraction Radius", range: [0,20], value: def_R_attract};
+var blindspot = {id:"fl_blindspot", name: "Blind Spot", range: [1,360], value: def_blindspot};
 
 // action parameters for the buttons
 
-var playpause = { id:"dp_b1", name:"", actions: ["play","pause"], value: 0};
-var back = { id:"dp_b2", name:"", actions: ["back"], value: 0};
-var reload = { id:"dp_b3", name:"", actions: ["reload"], value: 0};
+var playpause = { id:"fl_b1", name:"", actions: ["play","pause"], value: 0};
+var back = { id:"fl_b2", name:"", actions: ["back"], value: 0};
+var reload = { id:"fl_b3", name:"", actions: ["reload"], value: 0};
 
 // widget.block helps distributing widgets in neat arrays
 
