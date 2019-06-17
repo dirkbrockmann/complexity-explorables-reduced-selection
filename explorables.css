@@ -1,11 +1,12 @@
 figure {
 	padding:0;
-	margin:0;
+	margin:2px;
+	margin-bottom:10px;
 	font-family:sans-serif;
 	padding:0;
-	width:280px;
-	display:inline-block;
+	width:290px;
 	border:1px black solid;
+	display:inline-block;
 }
 
 figcaption {
@@ -14,10 +15,19 @@ figcaption {
 }
 
 figure .explorable_display {
+	background-color:none;
+	text-align:center;
+	margin:auto;
+	display:block;
 
 }
 
 figure .explorable_widgets {
+	background-color:none;
+	text-align:center;
+	margin:auto;
+	display:block;
+	
 }
 
 figure .figname {

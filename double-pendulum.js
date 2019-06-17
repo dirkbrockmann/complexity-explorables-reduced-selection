@@ -43,7 +43,6 @@ var buttons = [
 ]
 
 
-
 var playblock = g.block({x0:1,y0:1,width:2,height:1}).Nx(2);
 
 var world = d3.selectAll("#double-pendulum_display").append("svg")
