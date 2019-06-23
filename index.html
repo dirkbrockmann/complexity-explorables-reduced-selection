@@ -8,47 +8,64 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="" />
   <meta name="author" content="Dirk Brockmann" />
- 
+  <link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css"/>
   <link rel="stylesheet" type="text/css" href="widget.v3.css" />
   <link rel="stylesheet" type="text/css" href="explorables.css" />
   <link rel="stylesheet" type="text/css" href="double-pendulum.css" />
-    <link rel="stylesheet" type="text/css" href="jujujajaki.css" />
+  <link rel="stylesheet" type="text/css" href="jujujajaki.css" />
 
   <script type="text/javascript" src="d3.v4.min.js"></script>
   <script type="text/javascript" src="widget.v3.6.js"></script>
 </head>
 
-<body>
-<figure>
-	<div id="jujujajaki_display" class="display-panel"></div>
+<body class="sans-serif">
+
+<div class="flex flex-wrap justify-center">
+  <div class=" w-100 w-40-l w-40-m pa3 mr2 tc tr-l tr-m">
+	  	<div id="jujujajaki_display" class="display-panel"></div>
 	<div id="jujujajaki_controls" class="control-panel"></div>
-    <figcaption> 
-		<div class="figname">Jujujajaki networks:</div> 
-		Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-		<div class="figsource">adapted from <a href="http://www.complexity-explorables.org/explorables/jujujajaki/">Complexity Explorables</a> </div>
+  </div>
+  <div class=" w-100 w-40-l w-40-m pa3 mr2">
+	<figcaption class="pa2 ma2 dib fw1 f6"> 
+		<div class="dib fw6">Jujujajaki networks:</div> 
+A dynamic network model that was designed to capture the emergence of community structures, heterogeneities and clusters that are frequently observed in social networks. Clusters are characterized by a high probability that a person's 'friends are also friends'. In this model not only the connectivity evolves but also the strength of links between nodes. The model was orginally proposed by Jussi Kumpula, Jukka-Pekka Onnela, Jari Saramäki, János Kertész and Kimmo Kaski.
+		<div class="tr mt2 f7">adapted from <a 			href="http://www.complexity-explorables.org/explorables/jujujajaki/">Complexity Explorables</a>
+		</div>
 	</figcaption>
-</figure>
+  </div>
+</div>
 
-
-<figure>
+<div class="flex flex-wrap justify-center">
+  <div class=" w-100 w-40-l w-40-m pa3 mr2 tc tr-l tr-m">
 	<div id="flocking_display" class="display-panel"></div>
-	<div id="flocking_controls" class="control-panel"></div>
-    <figcaption> 
-		<div class="figname">Collective motion:</div> 
-		Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-		<div class="figsource">adapted from <a href="http://www.complexity-explorables.org/explorables/collective-behavior/">Complexity Explorables</a> </div>
+	<div id="flocking_controls" class="control-panel"></div>  
+  </div>
+  <div class=" w-100 w-40-l w-40-m pa3 mr2">
+	<figcaption class="pa2 ma2 dib fw1 f6"> 
+		<div class="dib fw6">Collective motion:</div> 
+		A simple model for collective behavior, swarming and flocking in animals. Individuals move at constant speed and noisy directional changes in a two-dimensional box. Three interactions rules govern the behavior. Individuals avoid collisions, the align with others in their neighborhood and the try to move towards the center of mass of all individuals. As a consequence of these interactions different flocking states emerge.
+		<div class="tr mt2 f7">adapted from <a 			href="http://www.complexity-explorables.org/explorables/collective-behavior/">Complexity Explorables</a>
+		</div>
 	</figcaption>
-</figure>
-
-<figure>
+  </div>
+</div>
+	
+<div class="flex flex-wrap justify-center">
+  <div class=" w-100 w-40-l w-40-m pa3 mr2 tc tr-l tr-m">
 	<div id="double-pendulum_display" class="display-panel"></div>
 	<div id="double-pendulum_controls" class="control-panel"></div>
-    <figcaption> 
-		<div class="figname">The double pendulum:</div> 
-		Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-		<div class="figsource">adapted from <a href="http://www.complexity-explorables.org/explorables/double-trouble/">Complexity Explorables</a> </div>
+	
+  </div>
+  <div class=" w-100 w-40-l w-40-m pa3 mr2">
+	<figcaption class="pa2 ma2 dib fw1 f6"> 
+		<div class="dib fw6">The double pendulum:</div> 
+		One of the most famous dynamical systems that exhibits chaotic behavior and sensitivity to initial conditions. The double pendulum has no friction and exhibits apparently unpredictable movements. Two systems that are initialized almost identically will soon differ substantially in the state as a function of time.
+		<div class="tr mt2 f7">adapted from <a 			href="http://www.complexity-explorables.org/explorables/double-trouble/">Complexity Explorables</a>
+		</div>
 	</figcaption>
-</figure>
+  </div>
+</div>
+
 
 
 <script type="text/javascript" src="jujujajaki.js"></script>

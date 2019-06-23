@@ -1,44 +1,21 @@
-figure {
-	padding:0;
-	margin:2px;
-	margin-bottom:10px;
-	font-family:sans-serif;
-	padding:0;
-	width:290px;
-	border:1px black solid;
-	display:inline-block;
-}
-
-figcaption {
-	margin: 10px;
-	font-size:.8em;
-}
-
-figure .explorable_display {
-	background-color:none;
-	text-align:center;
-	margin:auto;
-	display:block;
-
-}
-
-figure .explorable_widgets {
-	background-color:none;
-	text-align:center;
-	margin:auto;
-	display:block;
+.fig .display-panel {
 	
 }
 
-figure .figname {
-	font-weight: bold;
-	display: inline;
+.fig .control-panel {
+	
 }
 
-figure .figsource {
-	margin-top:5px;
-	text-align:right;
-	font-size:.75em;
+.fig .figcaption {
+	
+}
+
+.fig .figname {
+	
+}
+
+.fig .figsource {
+	
 }
 
 
