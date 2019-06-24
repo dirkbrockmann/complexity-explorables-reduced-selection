@@ -1,3 +1,4 @@
+
 (function(){
 
 var world_width = 280,
@@ -59,7 +60,7 @@ var back = { id:"ff_b2", name:"", actions: ["back"], value: 0};
 
 
 
-var buttons = [
+ buttons = [
 	widget.button(playpause).size(60).symbolSize(30).update(runpause),
 	widget.button(back).size(60).symbolSize(30).update(resetsystem)
 ]
