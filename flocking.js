@@ -43,7 +43,7 @@ var blindspot = {id:"fl_blindspot", name: "Blind Spot", range: [1,360], value: d
 
 var playpause = { id:"fl_b1", name:"", actions: ["play","pause"], value: 0};
 var back = { id:"fl_b2", name:"", actions: ["back"], value: 0};
-var reload = { id:"fl_b3", name:"", actions: ["reload"], value: 0};
+var reload = { id:"fl_b3", name:"", actions: ["rewind"], value: 0};
 
 // widget.block helps distributing widgets in neat arrays
 
