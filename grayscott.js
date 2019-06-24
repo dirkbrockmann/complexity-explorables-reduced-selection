@@ -80,6 +80,9 @@ var buttons = [
 	widget.button(playpause).update(runpause).size(butsize).symbolSize(butssize)
 ]
 
+var name="grayscott"
+explorable_states.push({name:"grayscott",state:false,ppbutton:buttons[1]})
+
 // now the sliders for the fish
 
 /*function sq2fk(s,q){
@@ -163,16 +166,32 @@ var updates_per_frame = 10;
 
 // functions for the action buttons
 
-function runpause(d){ d.value == 1 ? t = d3.timer(
-	function() {
-	            for(let step=0; step<updates_per_frame; step++)
-	            {
-	                update();
-	            }
-	            draw();
-	            }
-	,1) : t.stop(); }
+function wurst() {
+            for(let step=0; step<updates_per_frame; step++)
+            {
+                update();
+            }
+            draw();
+            }
 
+
+
+	function runpause(d){ 
+		if (d.value == 1) {
+			explorable_states.forEach(function(d){
+				if (d.state==true) {
+					d.ppbutton.click()
+					d.state=false
+				}
+			})
+			t = d3.interval(wurst,0)
+			explorable_states.filter(function(d){return d.name==name})[0].state=true
+
+		} else {
+			t.stop()
+			explorable_states.filter(function(d){return d.name==name})[0].state=false
+		}
+	 }
 
 
 function resetparameters(){

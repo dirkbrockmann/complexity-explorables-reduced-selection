@@ -59,11 +59,13 @@ var back = { id:"ff_b2", name:"", actions: ["back"], value: 0};
 //var reset = { id:"b3", name:"", actions: ["rewind"], value: 0};
 
 
-
  buttons = [
 	widget.button(playpause).size(60).symbolSize(30).update(runpause),
 	widget.button(back).size(60).symbolSize(30).update(resetsystem)
 ]
+
+var name="forrest fire"
+explorable_states.push({name:"forrest fire",state:false,ppbutton:buttons[0]})
 
 var f = {id:"ff_f", name: "Lightning rate", range: [0.1,1], value: def_f};
 var p = {id:"ff_p", name: "Vegetation growth rate", range: [0.01,0.1], value: def_p};
@@ -124,9 +126,18 @@ var t;
 
 function runpause(d){ 
 	if (d.value == 1) {
+		explorable_states.forEach(function(d){
+			if (d.state==true) {
+				d.ppbutton.click()
+				d.state=false
+			}
+		})
 		t = d3.interval(runsim,0)
+		explorable_states.filter(function(d){return d.name==name})[0].state=true
+
 	} else {
 		t.stop()
+		explorable_states.filter(function(d){return d.name==name})[0].state=false
 	}
  }
 

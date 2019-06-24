@@ -8,6 +8,8 @@ var world_width = 280,
 	n_grid_y = 2,
 	margin = 10;
 	
+
+	
 var display = d3.selectAll("#jujujajaki_display").append("svg")
 	.attr("width",world_width)
 	.attr("height",world_height)
@@ -59,6 +61,9 @@ var buttons = [
 	widget.button(playpause).update(runpause).size(60).symbolSize(30),
 	widget.button(back).update(resetsystem).size(60).symbolSize(30)
 ]
+
+var name="jujujajaki"
+explorable_states.push({name:"jujujajaki",state:false,ppbutton:buttons[0]})
 
 var delta = {id:"delta", name: "reinforcement increment", range: [0,10], value: def_delta};
 var p_explore = {id:"p_explore", name: "exploration probability", range: [0,1], value: def_p_explore};
@@ -187,13 +192,25 @@ simulation = d3.forceSimulation(nodes)
 // functions for the action buttons
 
 
-function runpause(d){ 
-	if (d.value == 1) {
-		t = d3.interval(runsim,0)
-	} else {
-		t.stop()
-	}
- }
+
+ 
+ function runpause(d){ 
+ 	if (d.value == 1) {
+ 		explorable_states.forEach(function(d){
+ 			if (d.state==true) {
+ 				d.ppbutton.click()
+ 				d.state=false
+ 			}
+ 		})
+ 		t = d3.interval(runsim,0)
+ 		explorable_states.filter(function(d){return d.name==name})[0].state=true
+
+ 	} else {
+ 		t.stop()
+ 		explorable_states.filter(function(d){return d.name==name})[0].state=false
+ 	}
+  }
+  
 
 function resetsystem(){
 

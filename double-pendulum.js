@@ -42,6 +42,9 @@ var buttons = [
 	
 ]
 
+var name="dp"
+explorable_states.push({name:"dp",state:false,ppbutton:buttons[0]})
+
 
 var playblock = g.block({x0:1,y0:1,width:2,height:1}).Nx(2);
 
@@ -292,14 +295,20 @@ function runpause(d){
 				.attr("d",line(hist))
 			ghost_pendulum.select(".trajectory-ghost").transition().duration(500).style("opacity",0).transition().duration(500).style("opacity",null)
 				.attr("d",line(ghist))
-			
+			explorable_states.forEach(function(d){
+				if (d.state==true) {
+					d.ppbutton.click()
+					d.state=false
+				}
+			})
 			t = d3.timer(runsim,0);
+			explorable_states.filter(function(d){return d.name==name})[0].state=true
 	
 		
 	} else {
 		t.stop();
 		
-		
+		explorable_states.filter(function(d){return d.name==name})[0].state=false
 		theta1.value = y[0] > 0 ? (- Math.PI +(y[0]+Math.PI) % (2*Math.PI) ) : (Math.PI +(y[0]-Math.PI) % (2*Math.PI))
 		theta2.value = y[1] > 0 ? (- Math.PI +(y[1]+Math.PI) % (2*Math.PI) ) : (Math.PI +(y[1]-Math.PI) % (2*Math.PI))
 		
@@ -315,6 +324,9 @@ function runpause(d){
 	}
 
 }
+
+
+
 
 function legs(theta1,theta2){
 	return [

@@ -75,6 +75,10 @@ widget.button(playpause).update(runpause).size(butsize).symbolSize(butssize)
 
 ]
 
+var name="swarm"
+explorable_states.push({name:"swarm",state:false,ppbutton:buttons[2]})
+
+
 // position scales
 var X = d3.scaleLinear().domain([0,L]).range([0,world_width]);
 var Y = d3.scaleLinear().domain([0,L]).range([world_height,0]);
@@ -167,7 +171,25 @@ var t;
 
 // functions for the action buttons
 
-function runpause(d){ d.value == 1 ? t = d3.timer(runsim,0) : t.stop(); }
+
+
+function runpause(d){ 
+	if (d.value == 1) {
+		explorable_states.forEach(function(d){
+			if (d.state==true) {
+				d.ppbutton.click()
+				d.state=false
+			}
+		})
+		t = d3.interval(runsim,0)
+		explorable_states.filter(function(d){return d.name==name})[0].state=true
+
+	} else {
+		t.stop()
+		explorable_states.filter(function(d){return d.name==name})[0].state=false
+	}
+ }
+
 
 function resetpositions(){
 	
