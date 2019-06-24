@@ -15,10 +15,29 @@
   <link rel="stylesheet" type="text/css" href="jujujajaki.css" />
 
   <script type="text/javascript" src="d3.v4.min.js"></script>
+  <script type="text/javascript" src="d3-scale-chromatic.v1.min.js"></script>
   <script type="text/javascript" src="widget.v3.6.js"></script>
+    <script type="text/javascript" src="lattice.v3.js"></script>
+	
 </head>
 
 <body class="sans-serif">
+
+<div class="flex flex-wrap justify-center">
+  <div class=" w-100 w-40-l w-40-m pa3 mr2 tc tr-l tr-m">
+	  	<div id="grayscott_display" class="display-panel"></div>
+	<div id="grayscott_controls" class="control-panel"></div>
+  </div>
+  <div class=" w-100 w-40-l w-40-m pa3 mr2">
+	<figcaption class="pa2 ma2 dib fw1 f6"> 
+		<div class="dib fw6">Complex Pattern Formation:</div> 
+		Nonlinear reaction diffusion systems can exhibit a variety of complex spatio-temporal systems. This is the Gray-Scott model, a two species autocatalytic system. Depending on the parameter choices this system can exhibit stationary patterns, spation temporal chaos, spiral waves and dynamic patterns reminiscent of biological cell-division. 
+		<div class="tr mt2 f7">adapted from <a 			href="http://www.complexity-explorables.org/explorables/grayscott/">Complexity Explorables</a>
+		</div>
+	</figcaption>
+  </div>
+</div>
+
 
 <div class="flex flex-wrap justify-center">
   <div class=" w-100 w-40-l w-40-m pa3 mr2 tc tr-l tr-m">
@@ -67,7 +86,7 @@ A dynamic network model that was designed to capture the emergence of community 
 </div>
 
 
-
+<script type="text/javascript" src="grayscott.js"></script>
 <script type="text/javascript" src="jujujajaki.js"></script>
 <script type="text/javascript" src="double-pendulum.js"></script>
 <script type="text/javascript" src="flocking.js"></script>
